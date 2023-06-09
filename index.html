@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" href="styles2.css">
+  <!-- <link rel="stylesheet" href="nav.css"> -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Roboto:wght@300;400&display=swap"
+    rel="stylesheet">
+  <title>My own site</title>
+</head>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<body>
+  <div class="all-info">
+
+    <header>
+
+
+
+
+      <div class="tabs-container">
+        <div class="logo">gift</div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Blogs</a>
+            </li>
+          </ul>
+        </div>
+        <div class="gift btnLogin-popup">
+          <a href="#">Login</a>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+
+      <main class="main">
+
+        <!-- Block 1 -->
+        <div class="block1">
+          <div class="block1_column1">
+            <div class="block1_title">
+              Find a gift for your wife or girlfriend
+            </div>
+            <div class="block1_text">
+              Struggling to find a gift for your wife or girlfriend? No problem!
+            </div>
+            <div class="block1_button">
+              <a href="">FIND GIFT NOW</a>
+            </div>
+          </div>
+          <div class="block1_column2">
+            <img src="img/block1.png" alt="" />
+          </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="block2">
+          <div class="block2_column1">
+            <div class="block2_title">How we work?</div>
+            <div class="block2_text">
+              We’ve actually already asked hundreds of women what they want, and
+              made a database with the results. All you have to do is take our
+              short survey that only takes seconds, and our proprietary algorithm
+              will match you with a few perfect gift options.
+            </div>
+            <div class="block2_button">
+              <a href="">LEARN MORE</a>
+            </div>
+          </div>
+          <div class="block2_column2">
+            <img src="img/thanks.jpg" alt="" />
+          </div>
+        </div>
+    </div>
+    <!-- Block 3 -->
+    <div class="block3">
+
+      <div class="block3_title">
+        Gifts for all Occasions
+      </div>
+      <div class="block3_text">
+        “Try our web app to find the best gifts for all occasions”
+      </div>
+      <div class="cards">
+        <div class="card item" id="card1">
+          <div class="item__top">
+            <img src="img/Birthday.png" alt="">
+          </div>
+          <div class="item__bottom">
+            <div class="item__title">
+              Birthday
+            </div>
+            <div class="item__text">
+              <a class="item__link" href="">See more ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card item" id="card2">
+          <div class="item__top">
+            <img src="img/Anniversary.png" alt="">
+          </div>
+          <div class="item__bottom">
+            <div class="item__title">
+              Anniversary
+            </div>
+            <div class="item__text">
+              <a class="item__link" href="">See more ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card item" id="card3">
+          <div class="item__top">
+            <img src="img/Valentine.png" alt="">
+          </div>
+          <div class="item__bottom">
+            <div class="item__title">
+              Valentine's Day
+            </div>
+            <div class="item__text">
+              <a class="item__link" href="">See more ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card item" id="card4">
+          <div class="item__top">
+            <img src="img/Christmas.png" alt="">
+          </div>
+          <div class="item__bottom">
+            <div class="item__title">
+              Christmas
+            </div>
+            <div class="item__text">
+              <a class="item__link" href="">See more ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button onclick="moveLeft()">Вліво</button>
+      <button onclick="moveRight()">Вправо</button>
+
+
+
+
+    </div>
+
+    <script>
+      const card1 = document.getElementById('card1');
+      const card2 = document.getElementById('card2');
+      const card3 = document.getElementById('card3');
+      const card4 = document.getElementById('card4');
+
+      function moveRight() {
+        const container = document.querySelector('.cards');
+        const cardWidth = card1.offsetWidth;
+        const scrollAmount = cardWidth + 10; // Додали зсув, щоб елементи не накладалися один на одного
+        container.scrollBy({
+          top: 0,
+          left: scrollAmount,
+          behavior: 'smooth'
+        });
+      }
+
+      function moveLeft() {
+        const container = document.querySelector('.cards');
+        const cardWidth = card1.offsetWidth;
+        const scrollAmount = cardWidth + 10;
+        container.scrollBy({
+          top: 0,
+          left: -scrollAmount,
+          behavior: 'smooth'
+        });
+      }
+    </script>
+
+    <!-- Block 4 -->
+    <div class="row">
+      <div class="column">
+        <div class="column__text">
+          <span>Ready to get started?</span>
+          Sign up or contact us
+        </div>
+      </div>
+
+      <div class="column buttons">
+        <div class="column__button1">
+          <a class="button1__link" href="#">FIND GIFT NOW</a>
+
+        </div>
+        <div class="column__button2">
+
+          <a class="button2__link" href="#">HOW IT WORKS</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Block 5 -->
+    <div class="block5_container">
+      <div class="block5_title">Our best blogs ever</div>
+      <div class="block5_text">"Try our blog to find the best tips and tricks to select your gifts"</div>
+    </div>
+
+    <!-- Block 6 -->
+    <div class="block6_wrapper">
+      <div class="wrapper">
+        <div class="block6_container1">
+          <div class="block6_content">
+            <div class="block6_column1">
+              <img src="img/couple.png" alt="">
+            </div>
+            <div class="block6_column2">
+              <p class="block6_title">Mr. John Doe</p>
+              <p class="block6_text">The best way to wish your wife</p>
+              <a href="#" class="block6_text_footer">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="block6_container2">
+
+          <div class="card1">
+            <div class="card_format">
+              <div class="card1__title">
+                <p>Database to find the gifts for your<br>girlfriend</p>
+              </div>
+              <div class="card1__text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et
+                  dolore...</p>
+              </div>
+              <p><a href="#" class="block6_footertxt_card">Read More</a></p>
+            </div>
+
+          </div>
+          <div class="card1">
+            <div class="card_format">
+              <div class="card1__title">
+                <p> How Artificial Intelligence read your mind to find the best gift</p>
+              </div>
+              <div class="card1__text">
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et
+                  dolore...</p>
+              </div>
+              <p><a href="#" class="block6_footertxt_card">Read More</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      </main>
+
+      <footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <section class="sub_block new_dex">
+          <form id="subscription_form" class="form_sub" method="POST">
+            <p class="title">Like what you're reading? Get weekly updates that will help
+              <br> you grow as a designer.
+            </p>
+            <div class="inputs">
+              <input type="text" name="name" required placeholder="Name">
+              <input type="email" name="email" required placeholder="Email">
+            </div>
+            <button type="submit">Subscribe</button>
+          </form>
+        </section>
+        <script src="app.js"></script>
+        <!-- Block 7 -->
+        <div class="panel">
+          <div class="container">
+            <div class="footer_menu">
+
+              <a href="#" class="">Home</a>
+              <a href="#" class="">About</a>
+              <div><a class="logo2">gift</a></div>
+              <a href="#" class="">Service</a>
+              <a href="#" class="">Blog</a>
+            </div>
+            <div class="footer_line">
+
+            </div>
+            <div class="icons_menu">
+              <img src="img/facebook.svg" alt="">
+              <img src="img/twitter.svg" alt="">
+              <img src="img/instagram.svg" alt="">
+              <img src="img/youtube.svg" alt="">
+              <img src="img/pinterest.svg" alt="">
+
+            </div>
+            <div class="footer_text">
+              <p>© 2010 — 2023</p>
+              <p>Privacy — Terms</p>
+            </div>
+
+          </div>
+        </div>
+
+      </footer>
+    </div>
+  </div>
+  <div class="wrapper-login">
+    <span class="icon-close"><ion-icon name="close"></ion-icon>
+    </span>
+    <div class="form-box login">
+      <h2>Login</h2>
+      <form action="login.php" method="POST">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" name="email" required>
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" name="password" required>
+          <label>Password</label>
+        </div>
+        <div class="remember-forgot">
+
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="login-register">
+          <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+        </div>
+      </form>
+    </div>
+
+    <div class="form-box register">
+      <h2>Registration</h2>
+      <form action="#" method="POST">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <input type="text" required>
+          <label>Username</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" required>
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" required>
+          <label>Password</label>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox"> I agree to the terms & conditions</label>
+        </div>
+        <button type="submit" class="btn">Register</button>
+        <div class="login-register">
+          <p>Already have an account?<a href="#" class="login-link"> Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- <script src="nav.js"></script> -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
